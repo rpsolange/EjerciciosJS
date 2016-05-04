@@ -1,7 +1,16 @@
 var inversion={
-	valor_inicial: prompt("Ingrese el valor inicial de la inversión: "),
-	tasa: prompt("La tasa de interés es: "),
-	periodo: prompt("Ingrese el plazo en que se planea obtener el fruto de la inversión:"),
+	valor: null,
+	tasa: null,
+	periodo: null	
 }
-var valor_futuro= (inversion.valor_inicial*Math.pow(1+(inversion.tasa/100),inversion.periodo)).toFixed(2);
-alert("El valor futuro es "+valor_futuro);
+for(var i in inversion) {
+	inversion[i] = prompt("Ingresa "+i);
+}
+
+var resultado= inversion.valor*Math.pow(1+inversion.tasa/100,inversion.periodo);
+alert("La inversion futura es "+resultado);
+
+/*inversion.valor=prompt("Ingrese valor");
+inversion.tasa=prompt("Ingrese tasa");
+inversion.periodo=prompt("Ingrese periodo");
+*/

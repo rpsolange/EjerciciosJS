@@ -1,7 +1,11 @@
 var masa={
-	peso: prompt("Introduzca su peso en kg"),
-	altura: parseFloat(prompt("Ingrese su altura en metros"))
+	peso: null,
+	altura:null,
+	imc: function(){
+		return (this.peso/(Math.pow(this.altura,2))).toFixed(2);
+	}
 };
 
-var imc=(masa.peso/(Math.pow(masa.altura,2))).toFixed(2);
-alert("Su IMC es "+imc);
+masa.peso=parseFloat(prompt("Ingrese su peso:"));
+masa.altura=parseFloat(prompt("Ingrese su altura:"));
+alert("Su IMC es "+masa.imc());
