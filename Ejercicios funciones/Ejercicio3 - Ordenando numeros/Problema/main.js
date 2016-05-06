@@ -18,3 +18,4 @@ function orden(){
 	} 
 }
 orden();
+//.sort ordena los numeros
